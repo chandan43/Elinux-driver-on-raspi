@@ -1,0 +1,14 @@
+/ {
+	mygpio@7E200000 {
+		compatible = "ti,mygpio";
+		#address-cells = <1>;
+		#size-cells = <1>;
+		reg = <0x7E200000 0x40>; /*0x20200000*/
+		status = "okay";
+	};
+
+	extled {
+                compatible = "gpio-extled";
+                gpios = <&gpio 10 GPIO_ACTIVE_LOW>;
+        };
+};
